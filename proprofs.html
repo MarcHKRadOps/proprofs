@@ -89,7 +89,7 @@
             {
                 code:'/1087502/PP_footer_D',
                 mediaTypes: {
-                    banner: {sizes: []}
+                    banner: {sizes: [[970,90],[728,90]]}
                 },
                 bids: [
                     {bidder:'aol',size:['970x90'],params:{placement:'5234229'},labelAny: []},
@@ -105,7 +105,7 @@
             {
                 code:'/1087502/PP_header_M',
                 mediaTypes: {
-                    banner: {sizes: []}
+                    banner: {sizes: [[300,50],[320,50],[320,100],[320,100]]}
                 },
                 bids: [
                     {bidder:'aol',size:['320x50'],params:{placement:'5234264'},labelAny: []},
@@ -121,12 +121,12 @@
                         {
                 code:'/1087502/PP_body-1_M',
                 mediaTypes: {
-                    banner: {sizes: []}
+                    banner: {sizes: [[300,250],[320,100],[336,280]]}
                 },
                 bids: [
                     {bidder:'aol',size:['300x250'],params:{placement:'5234261'},labelAny: []},
                     {bidder:'appnexus',size:['sizeless'],params:{placementId:'19673421'},labelAny: []},
-                    {bidder:'conversant',size:['300 × 250'],params:{site_id:'ba16e180-2b1e-4e2c-4331-9c934fc3f610'},labelAny: []},
+                    {bidder:'conversant',size:['300x250'],params:{site_id:'ba16e180-2b1e-4e2c-4331-9c934fc3f610'},labelAny: []},
                     {bidder:'ix',size:['300x250'],params:{siteId:'240394'},labelAny: []},
                     {bidder:'openx',size:['300x250, 336x280'],params:{unit:'539756669',delDomain:'Proprofs_ROS-300x250_M'},labelAny: []},
                     {bidder:'rubicon',size:['300x250, 320x100, 336x280'],params:{zoneId:'727916',accountId:'16730',siteId:'147986'},labelAny: []},
@@ -137,12 +137,12 @@
             {
                 code:'/1087502/PP_body-2_M',
                 mediaTypes: {
-                    banner: {sizes: []}
+                    banner: {sizes: [[300,250],[320,100],[336,280]]]}
                 },
                 bids: [
                     {bidder:'aol',size:['300x250'],params:{placement:'5234265'},labelAny: []},
                     {bidder:'appnexus',size:['sizeless'],params:{placementId:'19673433'},labelAny: []},
-                    {bidder:'conversant',size:['300×250'],params:{site_id:'ba16e180-2b1e-4e2c-4331-9c934fc3f610'},labelAny: []},
+                    {bidder:'conversant',size:['300x250'],params:{site_id:'ba16e180-2b1e-4e2c-4331-9c934fc3f610'},labelAny: []},
                     {bidder:'ix',size:['300x250'],params:{siteId:'240394'},labelAny: []},
                     {bidder:'openx',size:['300x250, 336x280'],params:{unit:'539756752',delDomain:'Proprofs_ROS-300x250_2_M'},labelAny: []},
                     {bidder:'rubicon',size:['300x250, 320x100, 336x280'],params:{zoneId:'727314',accountId:'16730',siteId:'147986'},labelAny: []},
@@ -153,7 +153,7 @@
             {
                 code:'/1087502/PP_header-sticky_M',
                 mediaTypes: {
-                    banner: {sizes: []}
+                    banner: {sizes: [[300,50],[320,50],[320,100],[320,100]]}
                 },
                 bids: [
                     {bidder:'aol',size:['320x50'],params:{placement:'5234263'},labelAny: []},
@@ -169,7 +169,7 @@
             {
                 code:'/1087502/PP_footer-sticky_M',
                 mediaTypes: {
-                    banner: {sizes: []}
+                    banner: {sizes: [[300,50],[320,50],[320,100],[320,100]]}
                 },
                 bids: [
                     {bidder:'aol',size:['320x50'],params:{placement:'5234262'},labelAny: []},
@@ -213,8 +213,7 @@
                         }
                     },
                     priceGranularity: customPriceMap,
-                    sizeConfig: [
-                    ]
+                    useBidCache: true
                 });
                 pbjs.requestBids({
                     bidsBackHandler: initAdserver,
@@ -367,8 +366,5 @@
                 });
             </script>
         </div>
-
-
-
     </body>
 </html>
