@@ -57,15 +57,15 @@
             {
                 code:'/1087502/ProProfs/PP_body-1_D',
                 mediaTypes: {
-                    banner: {sizes: [[300,250],[728,90],[336,280]]}
+                    banner: {sizes: [[728,90]]}
                 },
                 bids: [
-                    {bidder:'aol',size:['300x250'],params:{placement:'5234232'},labelAny: []},
-                    {bidder:'appnexus',size:['300x250'],params:{placementId:'19673412'},labelAny: []},
-                    {bidder:'conversant',size:['300x250'],params:{site_id:'bee3e5a8-4131-47af-6848-de52f7119675'},labelAny: []},
-                    {bidder:'ix',size:['300x250'],params:{siteId:'184785'},labelAny: []},
-                    {bidder:'openx',size:['300x250, 728x90'],params:{unit:'541158031',delDomain:'Proprofs_ROS-300x250/728x90'},labelAny: []},
-                    {bidder:'rubicon',size:['300x250, 336x280, 728x90'],params:{zoneId:'727960',accountId:'16730',siteId:'147986'},labelAny: []},
+                    {bidder:'aol',size:[''],params:{placement:'5234232'},labelAny: []},
+                    {bidder:'appnexus',size:[''],params:{placementId:'19673412'},labelAny: []},
+                    {bidder:'conversant',size:[''],params:{site_id:'bee3e5a8-4131-47af-6848-de52f7119675'},labelAny: []},
+                    {bidder:'ix',size:[''],params:{siteId:'184785'},labelAny: []},
+                    {bidder:'openx',size:['728x90'],params:{unit:'541158031',delDomain:'Proprofs_ROS-300x250/728x90'},labelAny: []},
+                    {bidder:'rubicon',size:['728x90'],params:{zoneId:'727960',accountId:'16730',siteId:'147986'},labelAny: []},
                     {bidder:'sharethrough',size:[''],params:{pkey:'2hije9iLju97pXUqiBRcBz9Y'},labelAny: []},
                     {bidder:'sovrn',size:[''],params:{tagid:'748694'},labelAny: []},
                 ]
@@ -239,6 +239,10 @@
                     addSize([0, 0], []).
                     addSize([768, 0], [[728,90],[300,250]]).
                     build();
+                var deskBody1 = googletag.sizeMapping().
+                    addSize([0, 0], []).
+                    addSize([768, 0], [[728,90]]).
+                    build();
                 var deskLead = googletag.sizeMapping().
                     addSize([0, 0], []).
                     addSize([768, 0], [[728,90]]).
@@ -247,6 +251,10 @@
                 var deskRect = googletag.sizeMapping().
                     addSize([0, 0], []).
                     addSize([768, 0], [[300,250]]).
+                    build();
+                var deskRect1 = googletag.sizeMapping().
+                    addSize([0, 0], []).
+                    addSize([768, 0], [[300,250],[300,600]]).
                     build();
                 var mobiHead = googletag.sizeMapping().
                     addSize([0, 0], [320,50]).
@@ -260,11 +268,11 @@
                     addSize([0, 0], [[300,50],[320,50],[320,100]]).
                     addSize([768, 0], []).
                     build();
-                googletag.defineSlot('/1087502/ProProfs/PP_body-1_D',        [[300,250], [728,90]],'ad-PP_body-1_D').defineSizeMapping(deskBody).addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_body-1_D',        [728,90],'ad-PP_body-1_D').defineSizeMapping(deskBody1).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_body-2_D',        [[728,90], [300,250]],'ad-PP_body-2_D').defineSizeMapping(deskBody).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_footer_D',        [[728,90], [970,90]],'ad-PP_footer_D').defineSizeMapping(deskLead).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_header_D',        [[728,90], [970,90]],'ad-PP_header_D').defineSizeMapping(deskLead).addService(googletag.pubads());
-                googletag.defineSlot('/1087502/ProProfs/PP_side-1_D',        [[300,250], [300,600]],'ad-PP_side-1_D').defineSizeMapping(deskRect).addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_side-1_D',        [[300,250], [300,600]],'ad-PP_side-1_D').defineSizeMapping(deskRect1).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_side-2_D',        [300,250],'ad-PP_side-2_D').defineSizeMapping(deskRect).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_body-1_M',        [[300,250], [320,100], [336,280]],'ad-PP_body-1_M').defineSizeMapping(mobiBody).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_body-2_M',        [[300,250], [320,100], [336,280]],'ad-PP_body-2_M').defineSizeMapping(mobiBody).addService(googletag.pubads());
