@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <script src=''></script>
+        <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
+        <script>
+            var PREBID_TIMEOUT = 1000;
+            var FAILSAFE_TIMEOUT = 3000;
+            var adUnits = [
+            {
+                code:'/1087502/ProProfs/PP_header-sticky_M',
+                mediaTypes: {
+                    banner: {sizes: [[300,50],[320,50]]}
+                },
+                bids: [
+                    {bidder:'appnexus',size:['320x50'],params:{placementId:'19673437'},labelAny: []},
+                    {bidder:'conversant',size:['320x50'],params:{site_id:'60058', secure: 1},labelAny: []},
+                    {bidder:'openx',size:['300x100, 320x50'],params:{unit:'539756734',delDomain:'proprofs-d.openx.net'},labelAny: []},
+                    {bidder:'rubicon',size:['300x50, 320x50'],params:{zoneId:'727312',accountId:'16730',siteId:'147986'},labelAny: []},
+                    {bidder:'sharethrough',size:[''],params:{pkey:'CdQT9sSsds6WycWCgBTfMg6n'},labelAny: []},
+                    {bidder:'sovrn',size:[''],params:{tagid:'748705'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119035@300x50'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119048@320x50'},labelAny: []},
+                    {bidder:'medianet',size:['320x50, 300x50'],params:{crid:'985434222',cid:'8CU52D829'},labelAny: []},
+                ]
+            },
+            {
+                code:'/1087502/ProProfs/PP_body-1_M',
+                mediaTypes: {
+                    banner: {sizes: [[300,250],[320,100],[336,280]]}
+                },
+                bids: [
+                    {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767f8d0031',pos:'pp_body-1_m_300x250'},labelAny: []},
+                    {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767f8d0031',pos:'pp_body-1_m_336x280'},labelAny: []},
+                    {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767f8d0031',pos:'pp_body-1_m_320x100'},labelAny: []},
+                    {bidder:'appnexus',size:['sizeless'],params:{placementId:'19673421'},labelAny: []},
+                    {bidder:'conversant',size:['300x250, 320x100, 336x280'],params:{site_id:'60058', secure: 1},labelAny: []},
+                    {bidder:'ix',params:{siteId:'240394',size:[300,250]},labelAny: []},
+                    {bidder:'openx',size:['300x250, 336x280'],params:{unit:'539756669',delDomain:'proprofs-d.openx.net'},labelAny: []},
+                    {bidder:'rubicon',size:['300x250, 320x100, 336x280'],params:{zoneId:'727916',accountId:'16730',siteId:'147986'},labelAny: []},
+                    {bidder:'sharethrough',size:[''],params:{pkey:'TTNt1V2MdwqnhXtC9XkMgC9f'},labelAny: []},
+                    {bidder:'sovrn',size:['336x280'],params:{tagid:'748701'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119031@300x250'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119044@320x100'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119049@336x280'},labelAny: []},
+                    {bidder:'medianet',size:['300x250, 320x100, 336x280'],params:{crid:'555676066',cid:'8CU52D829'},labelAny: []},
+                ]
+            }
+            ];
+
+            const customPriceMap = {
+                'buckets' : [
+                    {'min' : 0,'max' : 20,'increment' : 0.01 },
+                    {'min' : 20.05,'max' : 29.95,'increment' : 0.05},
+                    {'min' : 30,'max' : 39.90,'increment' : 0.1},
+                    {'min' : 40,'max' : 50,'increment' : 0.5},
+                    {'min' : 50,'max' : 99,'increment' : 1.0}
+                ]
+            };
+
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+            googletag.cmd.push(function() {
+                googletag.pubads().disableInitialLoad();
+            });
+
+            var pbjs = pbjs || {};
+            pbjs.que = pbjs.que || [];
+
+            pbjs.que.push(function() {
+                pbjs.addAdUnits(adUnits);
+                pbjs.setConfig({
+                    userSync: {
+                        iframeEnabled: true,
+                        filterSettings: {
+                            iframe: {bidders: '*',filter: 'include'}
+                        }
+                    },
+                    priceGranularity: customPriceMap,
+                    useBidCache: true
+                });
+                pbjs.requestBids({
+                    bidsBackHandler: initAdserver,
+                    timeout: PREBID_TIMEOUT
+                });
+            });
+
+            function initAdserver() {
+                if (pbjs.initAdserverSet) return;
+                pbjs.initAdserverSet = true;
+                googletag.cmd.push(function() {
+                    pbjs.setTargetingForGPTAsync && pbjs.setTargetingForGPTAsync();
+                    googletag.pubads().refresh();
+                });
+            }
+            
+            setTimeout(function() {
+                initAdserver();
+            }, FAILSAFE_TIMEOUT);
+
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/1087502/ProProfs/PP_header-sticky_M', [[300,50], [320,50]],'ad-PP_header-sticky_M').addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_body-1_M',        [[300,250], [320,100], [336,280]],'ad-PP_body-1_M').addService(googletag.pubads());
+
+                googletag.pubads().setTargeting("domain", window.location.hostname);
+                var pathParts = window.location.pathname.substr(0).split("/");
+                googletag.pubads().setTargeting("path1", pathParts[1] ? pathParts[1] : "home");
+                googletag.pubads().setTargeting("path2", pathParts[2] ? pathParts[2] : "none");
+                googletag.pubads().setTargeting("path3", pathParts[3] ? pathParts[3] : "none");
+                googletag.pubads().setTargeting("path4", pathParts[4] ? pathParts[4] : "none");
+                googletag.pubads().setTargeting("path5", pathParts[5] ? pathParts[5] : "none");
+
+                //googletag.pubads().enableSingleRequest();
+                //googletag.pubads().collapseEmptyDivs(true);
+                googletag.enableServices();
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id='ad-PP_header-sticky_M'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                    googletag.display('ad-PP_header-sticky_M');
+                });
+            </script>
+        </div>
+        <div id='ad-PP_body-1_M'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                    googletag.display('ad-PP_body-1_M');
+                });
+            </script>
+        </div>
+    </body>
+</html>
