@@ -148,7 +148,7 @@
 
                 ]
             },
-                        {
+            {
                 code:'/1087502/ProProfs/PP_body-1_M',
                 mediaTypes: {
                     banner: {sizes: [[300,250],[320,100],[336,280]]}
@@ -213,7 +213,7 @@
             {
                 code:'/1087502/ProProfs/PP_footer-sticky_M',
                 mediaTypes: {
-                    banner: {sizes: [[300,50],[320,50],[320,100],[320,100]]}
+                    banner: {sizes: [[320,50],[320,100],[300,100]]}
                 },
                 bids: [
                     {bidder:'appnexus',size:['320x50, 320x100'],params:{placementId:'19673434'},labelAny: []},
@@ -306,17 +306,18 @@
                     addSize([0, 0], [[300,50],[320,50],[320,100]]).
                     addSize([768, 0], []).
                     build();
-                googletag.defineSlot('/1087502/ProProfs/PP_body-1_D',        [[300,250], [728,90]],'ad-PP_body-1_D').defineSizeMapping(deskBody).addService(googletag.pubads());
-                googletag.defineSlot('/1087502/ProProfs/PP_body-2_D',        [[728,90], [300,250]],'ad-PP_body-2_D').defineSizeMapping(deskBody).addService(googletag.pubads());
-                googletag.defineSlot('/1087502/ProProfs/PP_footer_D',        [[728,90], [970,90]],'ad-PP_footer_D').defineSizeMapping(deskLead).addService(googletag.pubads());
+                
                 googletag.defineSlot('/1087502/ProProfs/PP_header_D',        [[728,90], [970,90]],'ad-PP_header_D').defineSizeMapping(deskLead).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_side-1_D',        [[300,250], [300,600]],'ad-PP_side-1_D').defineSizeMapping(deskRect).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_side-2_D',        [300,250],'ad-PP_side-2_D').defineSizeMapping(deskRect).addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_body-1_D',        [[300,250], [728,90]],'ad-PP_body-1_D').defineSizeMapping(deskBody).addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_body-2_D',        [[728,90], [300,250]],'ad-PP_body-2_D').defineSizeMapping(deskBody).addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_footer_D',        [[728,90], [970,90]],'ad-PP_footer_D').defineSizeMapping(deskLead).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_body-1_M',        [[300,250], [320,100], [336,280]],'ad-PP_body-1_M').defineSizeMapping(mobiBody).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_body-2_M',        [[300,250], [320,100], [336,280]],'ad-PP_body-2_M').defineSizeMapping(mobiBody).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_footer-sticky_M', [[320,50], [320,100]],'ad-PP_footer-sticky_M').defineSizeMapping(mobiStic).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_header_M',        [320,50],'ad-PP_header_M').defineSizeMapping(mobiHead).addService(googletag.pubads());
-                googletag.defineSlot('/1087502/ProProfs/PP_header-sticky_M', [[300,50], [320,50], [320,100]],'ad-PP_header-sticky_M').defineSizeMapping(mobiStic).addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_header-sticky_M', [[300,100], [320,50], [320,100]],'ad-PP_header-sticky_M').defineSizeMapping(mobiStic).addService(googletag.pubads());
 
                 googletag.pubads().setTargeting("domain", window.location.hostname);
                 var pathParts = window.location.pathname.substr(0).split("/");
@@ -325,7 +326,7 @@
                 googletag.pubads().setTargeting("path3", pathParts[3] ? pathParts[3] : "none");
                 googletag.pubads().setTargeting("path4", pathParts[4] ? pathParts[4] : "none");
                 googletag.pubads().setTargeting("path5", pathParts[5] ? pathParts[5] : "none");
-                googletag.pubads().setTargeting("country", "");
+
                 //googletag.pubads().enableSingleRequest();
                 //googletag.pubads().collapseEmptyDivs(true);
                 googletag.enableServices();
