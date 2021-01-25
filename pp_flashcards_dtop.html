@@ -15,10 +15,10 @@
                     {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767d8b002f',pos:'pp_header_d_728x91'},labelAny: []},
                     {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767d8b002f',pos:'pp_header_d_970x90'},labelAny: []},
                     {bidder:'appnexus',size:[''],params:{placementId:'19673418'},labelAny: []},
-                    {bidder:'conversant',size:['728x90, 970x90'],params:{site_id:'60058', secure: 1},labelAny: []},
+                    {bidder:'conversant',size:['970x90, 728x90'],params:{site_id:'60058', secure: 1},labelAny: []},
                     {bidder:'ix',params:{siteId:'184783',size:[728,90]},labelAny: []},
-                    {bidder:'openx',size:['728x90, 970x90'],params:{unit:'539756462',delDomain:'proprofs-d.openx.net'},labelAny: []},
-                    {bidder:'rubicon',size:['728x90, 970x90'],params:{zoneId:'699452',accountId:'16730',siteId:'147986'},labelAny: []},
+                    {bidder:'openx',size:['970x90, 728x90'],params:{unit:'539756462',delDomain:'proprofs-d.openx.net'},labelAny: []},
+                    {bidder:'rubicon',size:['970x90, 728x90'],params:{zoneId:'699452',accountId:'16730',siteId:'147986'},labelAny: []},
                     {bidder:'sharethrough',size:[''],params:{pkey:'Zj1CLGqRUiCixaNLFgFjZSq3'},labelAny: []},
                     {bidder:'sovrn',size:[''],params:{tagid:'748698'},labelAny: []},
                     {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119028@728x90'},labelAny: []},
@@ -118,10 +118,10 @@
                 var deskLead = googletag.sizeMapping().
                     addSize([0, 0], []).
                     addSize([768, 0], [[728,90]]).
-                    addSize([980, 0], [[728,90],[970,90]]).
+                    addSize([980, 0], [[970,90],[728,90]]).
                     build();
 
-                googletag.defineSlot('/1087502/ProProfs/PP_header_D',        [[728,90], [970,90]],'ad-PP_header_D').defineSizeMapping(deskLead).addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_header_D',        [[970,90],[728,90]],'ad-PP_header_D').defineSizeMapping(deskLead).addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_side-1_D',        [300,250],'ad-PP_side-1_D').addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_side-2_D',        [300,250],'ad-PP_side-2_D').addService(googletag.pubads());
                 googletag.pubads().setTargeting("domain", window.location.hostname);
