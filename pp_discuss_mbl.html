@@ -47,6 +47,28 @@
                 ]
             },
             {
+                code:'/1087502/ProProfs/PP_body-2_M',
+                mediaTypes: {
+                    banner: {sizes: [[300,250],[320,100],[336,280]]}
+                },
+                bids: [
+                    {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767f8d0031',pos:'pp_body-2_m_300x250'},labelAny: []},
+                    {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767f8d0031',pos:'pp_body-2_m_336x280'},labelAny: []},
+                    {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767f8d0031',pos:'pp_body-2_m_320x100'},labelAny: []},
+                    {bidder:'appnexus',size:['sizeless'],params:{placementId:'19673433'},labelAny: []},
+                    {bidder:'conversant',size:['300x250, 320x100, 336x280'],params:{site_id:'60058', secure: 1},labelAny: []},
+                    {bidder:'ix',params:{siteId:'240394',size:[300,250]},labelAny: []},
+                    {bidder:'openx',size:['300x250, 336x280'],params:{unit:'539756752',delDomain:'proprofs-d.openx.net'},labelAny: []},
+                    {bidder:'rubicon',size:['300x250, 320x100, 336x280'],params:{zoneId:'727314',accountId:'16730',siteId:'147986'},labelAny: []},
+                    {bidder:'sharethrough',size:[''],params:{pkey:'ijoarBN4oFR6C4gJzAddeKwC'},labelAny: []},
+                    {bidder:'sovrn',size:['336x280'],params:{tagid:'748695'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119031@300x250'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119044@320x100'},labelAny: []},
+                    {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119049@336x280'},labelAny: []},
+                    {bidder:'medianet',size:['300x250, 320x100, 336x280'],params:{crid:'727893383',cid:'8CU52D829'},labelAny: []},
+                ]
+            },
+            {
                 code:'/1087502/ProProfs/PP_footer-sticky_M',
                 mediaTypes: {
                     banner: {sizes: [[320,50]]}
@@ -118,6 +140,7 @@
             googletag.cmd.push(function() {
                 googletag.defineSlot('/1087502/ProProfs/PP_header-sticky_M', [[300,100], [320,50], [320,100]],'ad-PP_header-sticky_M').addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_body-1_M',        [[300,250], [320,100], [336,280]],'ad-PP_body-1_M').addService(googletag.pubads());
+                googletag.defineSlot('/1087502/ProProfs/PP_body-2_M',        [[300,250], [320,100], [336,280]],'ad-PP_body-2_M').addService(googletag.pubads());
                 googletag.defineSlot('/1087502/ProProfs/PP_footer-sticky_M', [320,50],'ad-PP_footer-sticky_M').addService(googletag.pubads());
 
                 googletag.pubads().setTargeting("domain", window.location.hostname);
@@ -150,7 +173,13 @@
                 });
             </script>
         </div>
-
+        <div id='ad-PP_body-2_M'>
+            <script type='text/javascript'>
+                googletag.cmd.push(function() {
+                    googletag.display('ad-PP_body-2_M');
+                });
+            </script>
+        </div>
         <div id='ad-PP_footer-sticky_M'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
