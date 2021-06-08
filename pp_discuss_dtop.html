@@ -1,9 +1,9 @@
-<html>
+    <html>
     <head>
         <script src=''></script>
         <script async src='https://securepubads.g.doubleclick.net/tag/js/gpt.js'></script>
         <script>
-            var PREBID_TIMEOUT = 1000;
+            var PREBID_TIMEOUT = 1100;
             var FAILSAFE_TIMEOUT = 3000;
             var adUnits = [
             {
@@ -19,11 +19,10 @@
                     {bidder:'ix',params:{siteId:'184783',size:[728,90]},labelAny: []},
                     {bidder:'openx',size:['970x90, 728x90'],params:{unit:'539756462',delDomain:'proprofs-d.openx.net'},labelAny: []},
                     {bidder:'rubicon',size:['970x90, 728x90'],params:{zoneId:'699452',accountId:'16730',siteId:'147986'},labelAny: []},
-                    {bidder:'sharethrough',size:[''],params:{pkey:'Zj1CLGqRUiCixaNLFgFjZSq3'},labelAny: []},
-                    {bidder:'sovrn',size:[''],params:{tagid:'748698'},labelAny: []},
                     {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119028@728x90'},labelAny: []},
                     {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119041@970x90'},labelAny: []},
                     {bidder:'medianet',size:['970x90, 728x90'],params:{crid:'776814475',cid:'8CU52D829'},labelAny: []},
+                    {bidder: 'gumgum', params: {inSlot: '208532'}, labelAny: []}            
                 ]
             },
             {
@@ -38,10 +37,9 @@
                     {bidder:'ix',params:{siteId:'184785',size:[300,250]},labelAny: []},
                     {bidder:'openx',size:['300x250'],params:{unit:'539756456',delDomain:'proprofs-d.openx.net'},labelAny: []},
                     {bidder:'rubicon',size:['300x250'],params:{zoneId:'727906',accountId:'16730',siteId:'147986'},labelAny: []},
-                    {bidder:'sharethrough',size:[''],params:{pkey:'CqfJMiFZrLH4ky123m5uu5xW'},labelAny: []},
-                    {bidder:'sovrn',size:[''],params:{tagid:'748699'},labelAny: []},
                     {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119029@300x250'},labelAny: []},
                     {bidder:'medianet',size:['300x250'],params:{crid:'162688649',cid:'8CU52D829'},labelAny: []},
+                    {bidder: 'gumgum', params: {inSlot: '208533'}, labelAny: []}            
                 ]
             },
             {
@@ -57,11 +55,10 @@
                     {bidder:'ix',params:{siteId:'184786',size:[300,250]},labelAny: []},
                     {bidder:'openx',size:['300x250, 300x600'],params:{unit:'539756459',delDomain:'proprofs-d.openx.net'},labelAny: []},
                     {bidder:'rubicon',size:['300x250, 300x600'],params:{zoneId:'727308',accountId:'16730',siteId:'147986'},labelAny: []},
-                    {bidder:'sharethrough',size:[''],params:{pkey:'ptiwqcqsbxEivNsKDyKG9Gjb'},labelAny: []},
-                    {bidder:'sovrn',size:[''],params:{tagid:'748700'},labelAny: []},
                     {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119030@300x250'},labelAny: []},
                     {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119043@300x600'},labelAny: []},
                     {bidder:'medianet',size:['300x250, 300x600'],params:{crid:'985434833',cid:'8CU52D829'},labelAny: []},
+                    {bidder: 'gumgum', params: {inSlot: '208534'}, labelAny: []}            
                 ]
             },
             {
@@ -73,9 +70,8 @@
                     {bidder:'onemobile',params:{dcn:'8a969009017373bfc8dcc0767d8b002f',pos:'pp_body-1_d_728x90'},labelAny: []},
                     {bidder:'openx',size:['728x90'],params:{unit:'541158031',delDomain:'proprofs-d.openx.net'},labelAny: []},
                     {bidder:'rubicon',size:['728x90'],params:{zoneId:'727960',accountId:'16730',siteId:'147986'},labelAny: []},
-                    {bidder:'sharethrough',size:[''],params:{pkey:'2hije9iLju97pXUqiBRcBz9Y'},labelAny: []},
-                    {bidder:'sovrn',size:[''],params:{tagid:'748700'},labelAny: []},
                     {bidder:'pubmatic',size:[''],params:{publisherId:'158638',adSlot:'3119038@728x90'},labelAny: []},
+                    {bidder: 'gumgum', params: {inSlot: '208529'}, labelAny: []}
                 ]
             }
             ];
@@ -174,6 +170,7 @@
                 });
             </script>
         </div>
+        <!-- If Connatix is running for US visitors, please use ad-PP_side-2_D in the RHC instead of ad-PP_side-1_D -->
         <div id='ad-PP_side-2_D'>
             <script type='text/javascript'>
                 googletag.cmd.push(function() {
